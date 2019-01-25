@@ -18,5 +18,5 @@
       bannerFooter.style = "display: block; background-color: {{ banner_color }}; color: #fff; font-weight: bold; text-align: center; text-shadow: 1px 1px 0 #444; position: fixed; width: 100%; bottom: 0; z-index: 99999; height: 16px"
       var body = document.body;
       body.appendChild(bannerFooter);
-    }, 1000);
+    }, 100);
   }());
