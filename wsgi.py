@@ -10,12 +10,18 @@ app = Flask(__name__)
 @app.route("/")
 def banner():
     # default to highest class
-    # Other common values:
-    # SECRET: #FF0000
-    # CONFIDENTIAL: #286090
-    # UNCLASSIFIED: #5cb85c
     classification = os.environ.get('CLASSIFICATION', 'TOP SECRET')
-    banner_color = os.environ.get('BANNER_COLOR', '#f0ad4e')
+    if classification.upper() == "TOP SECRET":
+        banner_color = '#f0ad4e'
+    elif classification.upper() == "CONFIDENTIAL":
+        banner_color = '#286090'
+    elif classification.upper() == "SECRET":
+        banner_color = '#ff0000'
+    elif classification.upper() == "UNCLASSIFIED":
+        banner_color = '#5cb85c'
+    else:
+        banner_color = '#ffc0cb'
+        classification = "NO CLASSIFICATION SET"
     return render_template('banner.html', banner_color=banner_color, classification=classification)
 
 if __name__ == "__main__":
