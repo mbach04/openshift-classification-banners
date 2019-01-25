@@ -4,10 +4,10 @@ import os
 
 
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route("/")
+@application.route("/")
 def banner():
     # default to highest class
     classification = os.environ.get('CLASSIFICATION', 'TOP SECRET')
@@ -25,4 +25,4 @@ def banner():
     return render_template('banner.html', banner_color=banner_color, classification=classification)
 
 if __name__ == "__main__":
-    app.run()
+    application.run()
