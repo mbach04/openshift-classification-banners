@@ -1,4 +1,3 @@
-<script>
 (function() {
     setTimeout(function () {
       var banner = document.createElement("div");
@@ -21,4 +20,3 @@
       body.appendChild(bannerFooter);
     }, 1000);
   }());
-</script>

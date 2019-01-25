@@ -7,7 +7,7 @@ import os
 application = Flask(__name__)
 
 
-@application.route("/")
+@application.route("/banner.js")
 def banner():
     # default to highest class
     classification = os.environ.get('CLASSIFICATION', 'TOP SECRET')
@@ -22,7 +22,7 @@ def banner():
     else:
         banner_color = '#ffc0cb'
         classification = "NO CLASSIFICATION SET"
-    return render_template('banner.html', banner_color=banner_color, classification=classification)
+    return render_template('banner.js', banner_color=banner_color, classification=classification)
 
 if __name__ == "__main__":
     application.run()
