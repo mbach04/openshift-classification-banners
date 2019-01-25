@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask import Response
 import os
 
 
@@ -22,7 +23,8 @@ def banner():
     else:
         banner_color = '#ffc0cb'
         classification = "NO CLASSIFICATION SET"
-    return render_template('banner.js', banner_color=banner_color, classification=classification)
+    resp = Response(render_template('banner.js', banner_color=banner_color, classification=classification), status=200, mimetype="application/javascript")
+    return resp
 
 if __name__ == "__main__":
     application.run()
