@@ -4,7 +4,7 @@
       var banner = document.createElement("div");
       banner.className = "classification-banner";
       banner.innerHTML = "{{ classification }}";
-      banner.style = "display: block; background-color: {{ banner_color }}; color: #fff; font-weight: bold; text-align: center; text-shadow: 1px 1px 0 #444; position: absolute; width: 100%; height: 16px"
+      banner.style = "display: block; background-color: {{ banner_color }}; color: #fff; font-weight: bold; text-align: center; text-shadow: 1px 1px 0 #444; position: absolute; left: 0; right: 0; width: 100%; height: 16px"
       var content = document.getElementsByClassName("navbar-pf-vertical")[0];
       if (typeof(content) != 'undefined' && content != null)
       {
