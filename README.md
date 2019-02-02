@@ -25,7 +25,7 @@ The HTTPS URL of this code repository which should be supplied to the _Git Repos
 If using the ``oc`` command line tool instead of the OpenShift web console, to deploy this sample Python web application, you can run:
 
 ```
-oc new-app https://github.com/OpenShiftDemos/os-sample-python.git
+oc new-app https://github.com/mach04/os-sample-python.git
 ```
 
 In this case, because no language type was specified, OpenShift will determine the language by inspecting the code repository. Because the code repository contains a ``requirements.txt``, it will subsequently be interpreted as including a Python application. When such automatic detection is used, ``python:latest`` will be used.
