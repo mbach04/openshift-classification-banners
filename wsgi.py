@@ -13,11 +13,11 @@ def banner():
     # default to highest class
     classification = os.environ.get('CLASSIFICATION', 'TOP SECRET')
     if classification.upper() == "TOP SECRET":
-        banner_color = '#f0ad4e'
+        banner_color = '#FF671F'
     elif classification.upper() == "CONFIDENTIAL":
-        banner_color = '#286090'
+        banner_color = '#0033A0'
     elif classification.upper() == "SECRET":
-        banner_color = '#ff0000'
+        banner_color = '#C8102E'
     elif classification.upper() == "UNCLASSIFIED":
         classification = "DYNAMIC CONTENT - HIGHEST POSSIBLE CLASSIFICATION IS: UNCLASSIFIED//FOR OFFICIAL USE ONLY";
         banner_color = '#5cb85c'
