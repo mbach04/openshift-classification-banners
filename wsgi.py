@@ -19,6 +19,7 @@ def banner():
     elif classification.upper() == "SECRET":
         banner_color = '#ff0000'
     elif classification.upper() == "UNCLASSIFIED":
+        classification = "DYNAMIC CONTENT - HIGHEST POSSIBLE CLASSIFICATION IS: UNCLASSIFIED//FOR OFFICIAL USE ONLY";
         banner_color = '#5cb85c'
     else:
         banner_color = '#ffc0cb'
