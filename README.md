@@ -15,7 +15,7 @@ oc get is -n openshift | grep python
 If using the ``oc`` command line tool instead of the OpenShift web console, to deploy this application, you can run:
 
 ```
-oc new-app https://github.com/mach04/openshift-classification-banners.git
+oc new-app https://github.com/mbach04/openshift-classification-banners.git
 ```
 
 In this case, because no language type was specified, OpenShift will determine the language by inspecting the code repository. Because the code repository contains a ``requirements.txt``, it will subsequently be interpreted as including a Python application. When such automatic detection is used, ``python:latest`` will be used. Ensure you have a `latest` tagged Python reference in your Python image stream.
